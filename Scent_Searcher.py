@@ -9,11 +9,15 @@ from nltk.corpus import stopwords
 
 
 ## Page configuration
-st.set_page_config(page_title='Scent Searcher', page_icon='🫧', layout='wide')
+st.set_page_config(page_title='Scent Searcher', page_icon='🌸', layout='wide')
 
 
 ## Load the data
-perfume_df = pd.read_csv('perfume_df.csv')
+@st.cache_data
+def load_data(url):
+    perfume_df = pd.read_csv('perfume_df.csv')
+    return perfume_df
+perfume_df = load_data('https://raw.githubusercontent.com/belleam/perfume_scent_searcher/main/perfume_df.csv')
 
 
 ## Construct TF-IDF matrix
