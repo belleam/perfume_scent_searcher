@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import stopwords
 
