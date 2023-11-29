@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.corpus import stopwords
 
 
 ## Page configuration
